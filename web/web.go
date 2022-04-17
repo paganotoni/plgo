@@ -13,6 +13,7 @@ var layout string
 
 func Render(ctx context.Context, content string, data map[string]interface{}) (string, error) {
 	pctx := plush.NewContextWithContext(ctx)
+
 	for k, v := range data {
 		pctx.Set(k, v)
 	}
